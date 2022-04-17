@@ -55,12 +55,12 @@
   
 
   
-    <meta name="description" content="本笔记仅为本人自学时为便于自己的理解和记忆而做的笔记，可能存在概念不准确的地方。 推荐使用Overleaf，参考网站。  基础在$\LaTeX$中，所有的命令都以 \开头。一般形式如下： 1\命令[参数]&amp;#123;参数&amp;#125;  一个$\LaTeX$文档简单的结构为： 1234567891011121314\documentclass[utf-8]&amp;#123;article&amp;#125;\u">
+    <meta name="description" content="本笔记仅为本人自学时为便于自己的理解和记忆而做的笔记，可能存在概念不准确的地方。 推荐使用Overleaf，参考网站。  基础在$\LaTeX$中，所有的命令都以 \开头。一般形式如下： 1\命令[参数]&amp;#123;参数&amp;#125; 一个$\LaTeX$文档简单的结构为： 1234567891011121314\documentclass[utf-8]&amp;#123;article&amp;#125;\us">
 <meta property="og:type" content="article">
 <meta property="og:title" content="$\LaTeX$ 笔记（更新中）">
 <meta property="og:url" content="http://heyya.com.cn/2022/03/26/LaTeX_note/index.html">
 <meta property="og:site_name" content="Heyya&#39;s Blog">
-<meta property="og:description" content="本笔记仅为本人自学时为便于自己的理解和记忆而做的笔记，可能存在概念不准确的地方。 推荐使用Overleaf，参考网站。  基础在$\LaTeX$中，所有的命令都以 \开头。一般形式如下： 1\命令[参数]&amp;#123;参数&amp;#125;  一个$\LaTeX$文档简单的结构为： 1234567891011121314\documentclass[utf-8]&amp;#123;article&amp;#125;\u">
+<meta property="og:description" content="本笔记仅为本人自学时为便于自己的理解和记忆而做的笔记，可能存在概念不准确的地方。 推荐使用Overleaf，参考网站。  基础在$\LaTeX$中，所有的命令都以 \开头。一般形式如下： 1\命令[参数]&amp;#123;参数&amp;#125; 一个$\LaTeX$文档简单的结构为： 1234567891011121314\documentclass[utf-8]&amp;#123;article&amp;#125;\us">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-03-25T16:00:00.000Z">
 <meta property="article:modified_time" content="2022-04-02T10:20:31.353Z">
@@ -124,305 +124,308 @@
 </blockquote>
 <h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><p>在$\LaTeX$中，所有的命令都以 <code>\</code>开头。一般形式如下：</p>
 <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\命</span>令[参数]&#123;参数&#125;</span><br></pre></td></tr></table></figure>
-
 <p>一个$\LaTeX$文档简单的结构为：</p>
 <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\documentclass</span>[utf-8]&#123;article&#125;</span><br><span class="line"><span class="keyword">\usepackage</span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">\title</span>&#123;This is a Title&#125;</span><br><span class="line"><span class="keyword">\auther</span>&#123;The name of the auther&#125;</span><br><span class="line"><span class="keyword">\date</span>&#123;<span class="keyword">\today</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">\begin</span>&#123;document&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">\maketitle</span></span><br><span class="line"></span><br><span class="line">The body of the article.</span><br><span class="line"><span class="keyword">\end</span>&#123;document&#125;</span><br></pre></td></tr></table></figure>
-
 <ol>
 <li>文档通常以<code>\documentclass&#123;&#125;</code>开头，它申明的文档的类型</li>
 </ol>
 <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\documentclass</span>[utf-8]&#123;article&#125;</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
+<ol>
 <li><code>\usepackage</code>为文档需要导入的宏包，类似C++中利用include导入头文件。</li>
 <li>在<code>\begin&#123;document&#125;</code>前的内容都成为前言（Preamble），通常内容为：</li>
 </ol>
 <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\title</span>&#123;标题&#125;</span><br><span class="line"><span class="keyword">\author</span>&#123;作者&#125;</span><br><span class="line"><span class="keyword">\date</span>&#123;<span class="keyword">\today</span>&#125;</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
+<ol>
 <li><code>\maketitle</code>会在该位置生成2即前言。</li>
 <li>文章的内容为：</li>
 </ol>
 <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;document&#125;</span><br><span class="line">	文章内容。</span><br><span class="line"><span class="keyword">\end</span>&#123;document&#125;</span><br></pre></td></tr></table></figure>
-
 <h2 id="文档的类"><a href="#文档的类" class="headerlink" title="文档的类"></a>文档的类</h2><h3 id="基本格式"><a href="#基本格式" class="headerlink" title="基本格式"></a>基本格式</h3><figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\documentclass</span>[&lt;option&gt;]&#123;&lt;class&gt;&#125;</span><br></pre></td></tr></table></figure>
-
 <h3 id="使用中文"><a href="#使用中文" class="headerlink" title="使用中文"></a>使用中文</h3><p>替换编译器为XeLaTeX或LuaLaTeX，参考<a target="_blank" rel="noopener" href="https://jdhao.github.io/2018/03/29/latex-chinese.zh/">博客</a>。</p>
 <ol>
 <li><p>使用ctexart类文档</p>
  <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\documentclass</span>[utf8]&#123;ctexart&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>使用ctex宏包</p>
- <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\usepackage</span>[utf8]&#123;ctex&#125;</span><br></pre></td></tr></table></figure></li>
+ <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\usepackage</span>[utf8]&#123;ctex&#125;</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
 <h2 id="常用排版格式"><a href="#常用排版格式" class="headerlink" title="常用排版格式"></a>常用排版格式</h2><figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\textbf</span>&#123;加粗&#125;</span><br><span class="line"><span class="keyword">\textit</span>&#123;斜体&#125;</span><br><span class="line"><span class="keyword">\underline</span>&#123;下划线&#125;</span><br><span class="line"><span class="keyword">\emph</span>&#123;强调&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">\begin</span>&#123;itemize&#125;</span><br><span class="line">	<span class="keyword">\item</span> 第一项</span><br><span class="line">	<span class="keyword">\item</span> 第二项</span><br><span class="line"><span class="keyword">\end</span>&#123;itemize&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">\begin</span>&#123;enumerate&#125;</span><br><span class="line">	<span class="keyword">\item</span> 枚举1</span><br><span class="line">	<span class="keyword">\item</span> 枚举2</span><br><span class="line"><span class="keyword">\end</span>&#123;enumerate&#125;</span><br><span class="line"></span><br><span class="line">行插入公式输入：</span><br><span class="line"><span class="built_in">$</span>...<span class="built_in">$</span> = <span class="keyword">\(</span>...<span class="keyword">\)</span> = <span class="keyword">\begin</span>&#123;math&#125;...<span class="keyword">\end</span>&#123;math&#125;</span><br><span class="line">ps: <span class="keyword">\displaystyle</span></span><br><span class="line"></span><br><span class="line">独行插入公式：</span><br><span class="line"><span class="keyword">\[</span>...<span class="keyword">\]</span> = <span class="keyword">\begin</span>&#123;equation&#125;...<span class="keyword">\end</span>&#123;equation&#125; = <span class="keyword">\begin</span>&#123;displaymath&#125;...<span class="keyword">\end</span>&#123;displaymath&#125;</span><br><span class="line">ps: <span class="built_in">$</span><span class="built_in">$</span>...<span class="built_in">$</span><span class="built_in">$</span>is discouraged as it can give inconsistent spacing, and may not work well with some math packages.</span><br><span class="line"></span><br><span class="line"><span class="keyword">\newline</span> 或 <span class="keyword">\\</span> <span class="comment">%换行</span></span><br></pre></td></tr></table></figure>
-
 <h2 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h2><p>$\LaTeX$需要知道文档的哪些内容表示为文本，哪些内容表示为数学公式，因此需要先声明数学公式的特殊环境，可以分为以下两类：</p>
 <ul>
 <li><p><code>text</code>为文本公式，即行内公式，显示在行内。</p>
 </li>
 <li><p><code>displaystyle</code>为显示公式，即行间公式，显示在独立的一行。</p>
 <p>  数学环境及其快捷方式如下表：</p>
-<table>
-<thead>
-<tr>
-<th align="center">类型</th>
-<th align="center">行内公式</th>
-<th align="center">行间公式</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><strong>环境</strong></td>
-<td align="center">math</td>
-<td align="center">displaystyle</td>
-</tr>
-<tr>
-<td align="center"><strong>$\LaTeX$快捷方式</strong></td>
-<td align="center">\(…\)</td>
-<td align="center">\[…\[</td>
-</tr>
-<tr>
-<td align="center"><strong>$\TeX$快捷方式</strong></td>
-<td align="center">$…$</td>
-<td align="center">$$…$$</td>
-</tr>
-</tbody></table>
-<p>  一些符号比如$\lim_{i \to \infty}$，会被压缩，可以在其之间加上<code>\displaystyle</code>使其在行内美观展现，其效果为：$\displaystyle \lim_{i \to \infty}$。</p>
+<p>  |         类型         | 行内公式  |   行间公式   |<br>  | :—————————: | :———-: | :—————: |<br>  |       <strong>环境</strong>       |   math    | displaystyle |<br>  | <strong>$\LaTeX$快捷方式</strong> | \(…\) |  \[…\[   |<br>  |  <strong>$\TeX$快捷方式</strong>  |  $…$  | $$…$$  |</p>
+<p>  一些符号比如$\lim<em>{i \to \infty}$，会被压缩，可以在其之间加上<code>\displaystyle</code>使其在行内美观展现，其效果为：$\displaystyle \lim</em>{i \to \infty}$。</p>
 </li>
 </ul>
-<h3 id="普通符号和特殊符号"><a href="#普通符号和特殊符号" class="headerlink" title="普通符号和特殊符号"></a>普通符号和特殊符号</h3><h4 id="普通符号"><a href="#普通符号" class="headerlink" title="普通符号"></a>普通符号</h4><p>在数学公式中，这些符号可以直接输入：+-&#x3D;!&#x2F;()[]&lt;&gt;|’:*，而其他符号则需要通过公式实现输入。</p>
+<h3 id="普通符号和特殊符号"><a href="#普通符号和特殊符号" class="headerlink" title="普通符号和特殊符号"></a>普通符号和特殊符号</h3><h4 id="普通符号"><a href="#普通符号" class="headerlink" title="普通符号"></a>普通符号</h4><p>在数学公式中，这些符号可以直接输入：+-=!/()[]&lt;&gt;|’:*，而其他符号则需要通过公式实现输入。</p>
 <h4 id="特殊符号"><a href="#特殊符号" class="headerlink" title="特殊符号"></a>特殊符号</h4><p>在数学公式中，如<code>#，%，$，&#123;，&#125;，~，\\，_，^</code>在公式中有特殊的用途，需要在其前面加上<code>\</code>来转译。</p>
 <h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><p>需要注意的是，在$\LaTeX$中，$sin$和$\sin$是有所不同的。下表为同类运算符的各例，同类中其他符号与示例类似。</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">公式</th>
-<th align="center">符号</th>
+<th style="text-align:center">公式</th>
+<th style="text-align:center">符号</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">\sin</td>
-<td align="center">$\sin$</td>
+<tbody>
+<tr>
+<td style="text-align:center">\sin</td>
+<td style="text-align:center">$\sin$</td>
 </tr>
 <tr>
-<td align="center">\sinh</td>
-<td align="center">$\sinh$</td>
+<td style="text-align:center">\sinh</td>
+<td style="text-align:center">$\sinh$</td>
 </tr>
 <tr>
-<td align="center">\arcsin</td>
-<td align="center">$\arcsin$</td>
+<td style="text-align:center">\arcsin</td>
+<td style="text-align:center">$\arcsin$</td>
 </tr>
 <tr>
-<td align="center">\log_2 x</td>
-<td align="center">$\log_2 x$</td>
+<td style="text-align:center">\log_2 x</td>
+<td style="text-align:center">$\log_2 x$</td>
 </tr>
 <tr>
-<td align="center">\exp A</td>
-<td align="center">$\exp A$</td>
+<td style="text-align:center">\exp A</td>
+<td style="text-align:center">$\exp A$</td>
 </tr>
 <tr>
-<td align="center">\bmod</td>
-<td align="center">$\bmod$</td>
+<td style="text-align:center">\bmod</td>
+<td style="text-align:center">$\bmod$</td>
 </tr>
 <tr>
-<td align="center">a \equiv 1 \pmod b</td>
-<td align="center">$ a\equiv 1 \pmod b$</td>
+<td style="text-align:center">a \equiv 1 \pmod b</td>
+<td style="text-align:center">$ a\equiv 1 \pmod b$</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h3 id="希腊字母表"><a href="#希腊字母表" class="headerlink" title="希腊字母表"></a>希腊字母表</h3><ul>
 <li>大写字母只需将公式首字母换为大写即可</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">公式</th>
-<th align="center">字母</th>
-<th align="center">公式</th>
-<th align="center">字母</th>
+<th style="text-align:center">公式</th>
+<th style="text-align:center">字母</th>
+<th style="text-align:center">公式</th>
+<th style="text-align:center">字母</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">\alpha<br />\Alpha</td>
-<td align="center">$\alpha$<br />$\Alpha$</td>
-<td align="center">\nu</td>
-<td align="center">$\nu$</td>
+<tbody>
+<tr>
+<td style="text-align:center">\alpha<br />\Alpha</td>
+<td style="text-align:center">$\alpha$<br />$\Alpha$</td>
+<td style="text-align:center">\nu</td>
+<td style="text-align:center">$\nu$</td>
 </tr>
 <tr>
-<td align="center">\beta</td>
-<td align="center">$\beta$</td>
-<td align="center">\xi</td>
-<td align="center">$\xi$</td>
+<td style="text-align:center">\beta</td>
+<td style="text-align:center">$\beta$</td>
+<td style="text-align:center">\xi</td>
+<td style="text-align:center">$\xi$</td>
 </tr>
 <tr>
-<td align="center">\gamma</td>
-<td align="center">$\gamma$</td>
-<td align="center">\omicron</td>
-<td align="center">$\omicron$</td>
+<td style="text-align:center">\gamma</td>
+<td style="text-align:center">$\gamma$</td>
+<td style="text-align:center">\omicron</td>
+<td style="text-align:center">$\omicron$</td>
 </tr>
 <tr>
-<td align="center">\delta</td>
-<td align="center">$\delta$</td>
-<td align="center">\pi</td>
-<td align="center">$\pi$</td>
+<td style="text-align:center">\delta</td>
+<td style="text-align:center">$\delta$</td>
+<td style="text-align:center">\pi</td>
+<td style="text-align:center">$\pi$</td>
 </tr>
 <tr>
-<td align="center">\epsilon<br />\varepsilon</td>
-<td align="center">$\epsilon$<br />$\varepsilon$</td>
-<td align="center">\rho<br />\varrho</td>
-<td align="center">$\rho$<br />$\varrho$</td>
+<td style="text-align:center">\epsilon<br />\varepsilon</td>
+<td style="text-align:center">$\epsilon$<br />$\varepsilon$</td>
+<td style="text-align:center">\rho<br />\varrho</td>
+<td style="text-align:center">$\rho$<br />$\varrho$</td>
 </tr>
 <tr>
-<td align="center">\zeta</td>
-<td align="center">$\zeta$</td>
-<td align="center">\sigma</td>
-<td align="center">$\sigma$</td>
+<td style="text-align:center">\zeta</td>
+<td style="text-align:center">$\zeta$</td>
+<td style="text-align:center">\sigma</td>
+<td style="text-align:center">$\sigma$</td>
 </tr>
 <tr>
-<td align="center">\eta</td>
-<td align="center">$\eta$</td>
-<td align="center">\tau</td>
-<td align="center">$\tau$</td>
+<td style="text-align:center">\eta</td>
+<td style="text-align:center">$\eta$</td>
+<td style="text-align:center">\tau</td>
+<td style="text-align:center">$\tau$</td>
 </tr>
 <tr>
-<td align="center">\theta<br />\vartheta</td>
-<td align="center">$\theta$<br />$\vartheta$</td>
-<td align="center">\upsilon</td>
-<td align="center">$\upsilon$</td>
+<td style="text-align:center">\theta<br />\vartheta</td>
+<td style="text-align:center">$\theta$<br />$\vartheta$</td>
+<td style="text-align:center">\upsilon</td>
+<td style="text-align:center">$\upsilon$</td>
 </tr>
 <tr>
-<td align="center">\lota</td>
-<td align="center">$\iota$</td>
-<td align="center">\phi<br />\varphi</td>
-<td align="center">$\phi$<br />$\varphi$</td>
+<td style="text-align:center">\lota</td>
+<td style="text-align:center">$\iota$</td>
+<td style="text-align:center">\phi<br />\varphi</td>
+<td style="text-align:center">$\phi$<br />$\varphi$</td>
 </tr>
 <tr>
-<td align="center">\kappa</td>
-<td align="center">$\kappa$</td>
-<td align="center">\chi</td>
-<td align="center">$\chi$</td>
+<td style="text-align:center">\kappa</td>
+<td style="text-align:center">$\kappa$</td>
+<td style="text-align:center">\chi</td>
+<td style="text-align:center">$\chi$</td>
 </tr>
 <tr>
-<td align="center">\lambda</td>
-<td align="center">$\lambda$</td>
-<td align="center">\psi</td>
-<td align="center">$\psi$</td>
+<td style="text-align:center">\lambda</td>
+<td style="text-align:center">$\lambda$</td>
+<td style="text-align:center">\psi</td>
+<td style="text-align:center">$\psi$</td>
 </tr>
 <tr>
-<td align="center">\mu</td>
-<td align="center">$\mu$</td>
-<td align="center">\omega</td>
-<td align="center">$\omega$</td>
+<td style="text-align:center">\mu</td>
+<td style="text-align:center">$\mu$</td>
+<td style="text-align:center">\omega</td>
+<td style="text-align:center">$\omega$</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h3 id="角标"><a href="#角标" class="headerlink" title="角标"></a>角标</h3><p>角标分为上下、上下和左右组合的角标</p>
-<h4 id="组合角标"><a href="#组合角标" class="headerlink" title="组合角标"></a>组合角标</h4><table>
+<h4 id="组合角标"><a href="#组合角标" class="headerlink" title="组合角标"></a>组合角标</h4><div class="table-container">
+<table>
 <thead>
 <tr>
-<th align="center">公式</th>
-<th align="center">符号</th>
+<th style="text-align:center">公式</th>
+<th style="text-align:center">符号</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">a^b</td>
-<td align="center">$a^b$</td>
+<tbody>
+<tr>
+<td style="text-align:center">a^b</td>
+<td style="text-align:center">$a^b$</td>
 </tr>
 <tr>
-<td align="center">a_b</td>
-<td align="center">$a_b$</td>
+<td style="text-align:center">a_b</td>
+<td style="text-align:center">$a_b$</td>
 </tr>
 <tr>
-<td align="center">^ba</td>
-<td align="center">$^ba$</td>
+<td style="text-align:center">^ba</td>
+<td style="text-align:center">$^ba$</td>
 </tr>
 <tr>
-<td align="center">_ba</td>
-<td align="center">$_ba$</td>
+<td style="text-align:center">_ba</td>
+<td style="text-align:center">$_ba$</td>
 </tr>
-</tbody></table>
-<h4 id="上标和下标"><a href="#上标和下标" class="headerlink" title="上标和下标"></a>上标和下标</h4><table>
+</tbody>
+</table>
+</div>
+<h4 id="上标和下标"><a href="#上标和下标" class="headerlink" title="上标和下标"></a>上标和下标</h4><div class="table-container">
+<table>
 <thead>
 <tr>
-<th align="center">公式</th>
-<th align="center">符号</th>
+<th style="text-align:center">公式</th>
+<th style="text-align:center">符号</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">\bar{a}</td>
-<td align="center">$\bar{a}$</td>
+<tbody>
+<tr>
+<td style="text-align:center">\bar{a}</td>
+<td style="text-align:center">$\bar{a}$</td>
 </tr>
 <tr>
-<td align="center">\acute{b}</td>
-<td align="center">$\acute{b}$</td>
+<td style="text-align:center">\acute{b}</td>
+<td style="text-align:center">$\acute{b}$</td>
 </tr>
 <tr>
-<td align="center">\check{c}</td>
-<td align="center">$\check{c}$</td>
+<td style="text-align:center">\check{c}</td>
+<td style="text-align:center">$\check{c}$</td>
 </tr>
 <tr>
-<td align="center">\breve{d}</td>
-<td align="center">$\breve{d}$</td>
+<td style="text-align:center">\breve{d}</td>
+<td style="text-align:center">$\breve{d}$</td>
 </tr>
 <tr>
-<td align="center">\grave{e}</td>
-<td align="center">$\grave{e}$</td>
+<td style="text-align:center">\grave{e}</td>
+<td style="text-align:center">$\grave{e}$</td>
 </tr>
 <tr>
-<td align="center">\dot{f}</td>
-<td align="center">$\dot{f}$</td>
+<td style="text-align:center">\dot{f}</td>
+<td style="text-align:center">$\dot{f}$</td>
 </tr>
 <tr>
-<td align="center">\hat{g}</td>
-<td align="center">$\hat{g}$</td>
+<td style="text-align:center">\hat{g}</td>
+<td style="text-align:center">$\hat{g}$</td>
 </tr>
 <tr>
-<td align="center">\tilde{h}</td>
-<td align="center">$\tilde{h}$</td>
+<td style="text-align:center">\tilde{h}</td>
+<td style="text-align:center">$\tilde{h}$</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h3 id="分数、二项式和根"><a href="#分数、二项式和根" class="headerlink" title="分数、二项式和根"></a>分数、二项式和根</h3><p>分数的公式为：<code>\frac&#123;&#125;&#123;&#125;</code>，二项式的公式为：<code>\binom&#123;&#125;&#123;&#125;</code>。</p>
 <p>例如：</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">公式</th>
-<th align="center">符号</th>
+<th style="text-align:center">公式</th>
+<th style="text-align:center">符号</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">\frac{n!}{k!(n-k)!}</td>
-<td align="center">$\frac{n!}{k!(n-k)!}$</td>
+<tbody>
+<tr>
+<td style="text-align:center">\frac{n!}{k!(n-k)!}</td>
+<td style="text-align:center">$\frac{n!}{k!(n-k)!}$</td>
 </tr>
 <tr>
-<td align="center">\binom{n}{k}</td>
-<td align="center">$\binom{n}{k}$</td>
+<td style="text-align:center">\binom{n}{k}</td>
+<td style="text-align:center">$\binom{n}{k}$</td>
 </tr>
-</tbody></table>
-<p>分数可层层嵌套，例如：<code>\frac&#123;1&#125;&#123;1+\frac&#123;1&#125;&#123;1+\frac&#123;1&#125;&#123;1+x&#125;&#125;&#125;</code>输出为：<br>$$<br>\frac{1}{1+\frac{1}{1+\frac{1}{1+x}}}<br>$$<br>由于多层分数嵌套或行内分数会使字符越来越小，可以使用<code>\tfrac&#123;&#125;&#123;&#125;</code>或<code>\dfrac&#123;&#125;&#123;&#125;</code>强制使用<code>\textstyle</code>或<code>\displaystyle</code>，同理二项式也有<code>\tbinom&#123;&#125;&#123;&#125;</code> 和<code>\dbinom&#123;&#125;&#123;&#125;</code>。</p>
-<p>例如：<code>\dfrac&#123;1&#125;&#123;1+\dfrac&#123;1&#125;&#123;1+\dfrac&#123;1&#125;&#123;1+x&#125;&#125;&#125;</code>输出为：<br>$$<br>\dfrac{1}{1+\dfrac{1}{1+\dfrac{1}{1+x}}}<br>$$</p>
-<h4 id="繁分数"><a href="#繁分数" class="headerlink" title="繁分数"></a>繁分数</h4><p>对于繁分数，可以使用<code>\cfrac</code>命令。例如：</p>
+</tbody>
+</table>
+</div>
+<p>分数可层层嵌套，例如：<code>\frac&#123;1&#125;&#123;1+\frac&#123;1&#125;&#123;1+\frac&#123;1&#125;&#123;1+x&#125;&#125;&#125;</code>输出为：</p>
+<script type="math/tex; mode=display">
+\frac{1}{1+\frac{1}{1+\frac{1}{1+x}}}</script><p>由于多层分数嵌套或行内分数会使字符越来越小，可以使用<code>\tfrac&#123;&#125;&#123;&#125;</code>或<code>\dfrac&#123;&#125;&#123;&#125;</code>强制使用<code>\textstyle</code>或<code>\displaystyle</code>，同理二项式也有<code>\tbinom&#123;&#125;&#123;&#125;</code> 和<code>\dbinom&#123;&#125;&#123;&#125;</code>。</p>
+<p>例如：<code>\dfrac&#123;1&#125;&#123;1+\dfrac&#123;1&#125;&#123;1+\dfrac&#123;1&#125;&#123;1+x&#125;&#125;&#125;</code>输出为：</p>
+<script type="math/tex; mode=display">
+\dfrac{1}{1+\dfrac{1}{1+\dfrac{1}{1+x}}}</script><h4 id="繁分数"><a href="#繁分数" class="headerlink" title="繁分数"></a>繁分数</h4><p>对于繁分数，可以使用<code>\cfrac</code>命令。例如：</p>
 <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;equation&#125;</span><br><span class="line">a = a<span class="built_in">_</span>0 + <span class="keyword">\cfrac</span>&#123;1&#125;&#123;a<span class="built_in">_</span>1</span><br><span class="line">		+ <span class="keyword">\cfrac</span>&#123;1&#125;&#123;a<span class="built_in">_</span>2</span><br><span class="line">		+ <span class="keyword">\cfrac</span>&#123;1&#125;&#123;a<span class="built_in">_</span>3&#125;&#125;&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;equation&#125; </span><br></pre></td></tr></table></figure>
-
-<p>输出如下：<br>$$<br>\begin{equation}<br>a &#x3D; a_0 + \cfrac{1}{a_1<br>        + \cfrac{1}{a_2<br>        + \cfrac{1}{a_3}}}<br>\end{equation}<br>$$</p>
-<h4 id="根式"><a href="#根式" class="headerlink" title="根式"></a>根式</h4><p>根式使用<code>\sqrt[]&#123;&#125;</code>来表示，其中<code>[]</code>的内容为可选选项，对于二次根式可以省略。例如：</p>
+<p>输出如下：</p>
+<script type="math/tex; mode=display">
+\begin{equation}
+a = a_0 + \cfrac{1}{a_1
+        + \cfrac{1}{a_2
+        + \cfrac{1}{a_3}}}
+\end{equation}</script><h4 id="根式"><a href="#根式" class="headerlink" title="根式"></a>根式</h4><p>根式使用<code>\sqrt[]&#123;&#125;</code>来表示，其中<code>[]</code>的内容为可选选项，对于二次根式可以省略。例如：</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">公式</th>
-<th align="center">输出</th>
+<th style="text-align:center">公式</th>
+<th style="text-align:center">输出</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">\sqrt{x}</td>
-<td align="center">$\sqrt{x}$</td>
+<tbody>
+<tr>
+<td style="text-align:center">\sqrt{x}</td>
+<td style="text-align:center">$\sqrt{x}$</td>
 </tr>
 <tr>
-<td align="center">\sqrt[3]{x}</td>
-<td align="center">$\sqrt[3]{x}$</td>
+<td style="text-align:center">\sqrt[3]{x}</td>
+<td style="text-align:center">$\sqrt[3]{x}$</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h3 id="累加、累乘和积分"><a href="#累加、累乘和积分" class="headerlink" title="累加、累乘和积分"></a>累加、累乘和积分</h3><p>累加符号和累乘符号的命令分别为：<code>\sum</code>、<code>\prod</code>，<code>^</code>和<code>_</code>分别指示上下限。例如：</p>
-<p>$\sum_{i&#x3D;1}^{n}a_i$、$\prod_{i&#x3D;1}^{n}a_i$，使用<code>\displaystyle</code>防止压缩。<br>$$<br>\sum_{i&#x3D;1}^{n}a_i \ \prod_{i&#x3D;1}^{n}a_i<br>$$</p>
-
+<p>$\sum<em>{i=1}^{n}a_i$、$\prod</em>{i=1}^{n}a_i$，使用<code>\displaystyle</code>防止压缩。</p>
+<script type="math/tex; mode=display">
+\sum_{i=1}^{n}a_i \\ \prod_{i=1}^{n}a_i</script>
 
 <div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
 </div></section></div>
@@ -640,5 +643,20 @@
 
 
   </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>

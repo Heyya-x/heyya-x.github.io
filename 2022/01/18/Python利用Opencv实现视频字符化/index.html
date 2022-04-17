@@ -55,12 +55,12 @@
   
 
   
-    <meta name="description" content="一、安装Opencv利用pip安装Opencv，在终端输入： 1pip install opencv-python  二、Opencv的基本操作图片操作 图片读取、预览  123456import cv2image &#x3D; cv2.imread(&amp;#x27;image.jpg&amp;#x27;)	#读取JPG图片cv2.imshow(&amp;#x27;image&amp;#x27;, image)	#在窗口中显示图片cv">
+    <meta name="description" content="一、安装Opencv利用pip安装Opencv，在终端输入： 1pip install opencv-python 二、Opencv的基本操作图片操作 图片读取、预览  123456import cv2image &#x3D; cv2.imread(&amp;#x27;image.jpg&amp;#x27;)	#读取JPG图片cv2.imshow(&amp;#x27;image&amp;#x27;, image)	#在窗口中显示图片cv2">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python利用Opencv实现视频字符化">
 <meta property="og:url" content="http://heyya.com.cn/2022/01/18/Python%E5%88%A9%E7%94%A8Opencv%E5%AE%9E%E7%8E%B0%E8%A7%86%E9%A2%91%E5%AD%97%E7%AC%A6%E5%8C%96/index.html">
 <meta property="og:site_name" content="Heyya&#39;s Blog">
-<meta property="og:description" content="一、安装Opencv利用pip安装Opencv，在终端输入： 1pip install opencv-python  二、Opencv的基本操作图片操作 图片读取、预览  123456import cv2image &#x3D; cv2.imread(&amp;#x27;image.jpg&amp;#x27;)	#读取JPG图片cv2.imshow(&amp;#x27;image&amp;#x27;, image)	#在窗口中显示图片cv">
+<meta property="og:description" content="一、安装Opencv利用pip安装Opencv，在终端输入： 1pip install opencv-python 二、Opencv的基本操作图片操作 图片读取、预览  123456import cv2image &#x3D; cv2.imread(&amp;#x27;image.jpg&amp;#x27;)	#读取JPG图片cv2.imshow(&amp;#x27;image&amp;#x27;, image)	#在窗口中显示图片cv2">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-01-18T15:53:26.000Z">
 <meta property="article:modified_time" content="2022-03-27T08:29:04.051Z">
@@ -119,7 +119,6 @@
 <h1 class="article-title"><span>Python利用Opencv实现视频字符化</span></h1>
 <h2 id="一、安装Opencv"><a href="#一、安装Opencv" class="headerlink" title="一、安装Opencv"></a>一、安装Opencv</h2><p>利用pip安装Opencv，在终端输入：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install opencv-python</span><br></pre></td></tr></table></figure>
-
 <h2 id="二、Opencv的基本操作"><a href="#二、Opencv的基本操作" class="headerlink" title="二、Opencv的基本操作"></a>二、Opencv的基本操作</h2><h3 id="图片操作"><a href="#图片操作" class="headerlink" title="图片操作"></a>图片操作</h3><ol>
 <li><p>图片读取、预览</p>
  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line">image = cv2.imread(<span class="string">&#x27;image.jpg&#x27;</span>)	<span class="comment">#读取JPG图片</span></span><br><span class="line"></span><br><span class="line">cv2.imshow(<span class="string">&#x27;image&#x27;</span>, image)	<span class="comment">#在窗口中显示图片</span></span><br><span class="line">cv2.waitKey(<span class="number">0</span>)</span><br><span class="line">cv2.destroyAllWindows()	<span class="comment">#关闭窗口</span></span><br></pre></td></tr></table></figure>
@@ -128,33 +127,30 @@
  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gray = cv2.cvtColor(frame, cv2.COLOR_RGB2GRAY)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>更改图片大小</p>
- <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">image_resize = cv2.resize(image, (<span class="number">100</span>, <span class="number">40</span>))</span><br></pre></td></tr></table></figure></li>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">image_resize = cv2.resize(image, (<span class="number">100</span>, <span class="number">40</span>))</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
 <h3 id="视频操作"><a href="#视频操作" class="headerlink" title="视频操作"></a>视频操作</h3><ol>
 <li>读取视频</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">video = cv2.VideoCapture(<span class="string">&#x27;video.mp4&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
+<ol>
 <li>逐帧读取</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ret, frame = video.read() <span class="comment">#读取第一帧</span></span><br><span class="line"><span class="keyword">while</span> ret:</span><br><span class="line">    operation() <span class="comment">#执行你的操作</span></span><br><span class="line">    ret, frame = video.read() <span class="comment">#在进入下一次循环前读取下一帧</span></span><br></pre></td></tr></table></figure>
-
 <h2 id="三、图片字符化"><a href="#三、图片字符化" class="headerlink" title="三、图片字符化"></a>三、图片字符化</h2><p>我们知道每个图片由像素组成，字符化的过程就是把每一个像素点替换成字符的过程，因此我们只需要将图片中的每一个像素点转换为相应点字符即可。Opencv根据颜色参数表，把灰度分为256分，代表不同的程度，因此我们只需要根据颜色表和我们的字符表建立一个映射关系。这里我们取字符表为</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dic = <span class="string">&#x27;&#x27;&#x27; .&#x27;`^&quot;,:;Il!i&gt;&lt;~+_-?][&#125;&#123;1)(|\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&amp;8%B@&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<p>由映射关系有：<br>$$<br>\frac{\text{颜色值}}{\text{颜色表长度}} &#x3D; \frac{\text{字符在字符表中的位置}}{\text{字符表的长度}}<br>$$<br>即：<br>$$<br>\text{字符在字符表中的位置}&#x3D;\frac{\text{颜色值}}{\text{颜色表长度}}\times \text{字符表的长度}<br>$$</p>
-<h3 id="图片字符化完整代码"><a href="#图片字符化完整代码" class="headerlink" title="图片字符化完整代码"></a>图片字符化完整代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line">dic = <span class="string">&#x27;&#x27;&#x27; .&#x27;`^&quot;,:;Il!i&gt;&lt;~+_-?][&#125;&#123;1)(|\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&amp;8%B@&#x27;&#x27;&#x27;</span></span><br><span class="line">image = cv2.imread(<span class="string">&#x27;image&#x27;</span>)</span><br><span class="line">gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)</span><br><span class="line">gray = cv2.resize(gray, (<span class="number">100</span>, <span class="number">40</span>)) <span class="comment">#大小可自定义调节</span></span><br><span class="line">str_image = <span class="string">&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> gray:</span><br><span class="line">    <span class="keyword">for</span> pixel <span class="keyword">in</span> line:</span><br><span class="line">        index = <span class="built_in">int</span>(pixel / <span class="number">256</span> * <span class="built_in">len</span>(dic)) <span class="comment">#获取对应字符的下标</span></span><br><span class="line">        str_image += dic[index]</span><br><span class="line">    str_image += <span class="string">&#x27;\n&#x27;</span> <span class="comment">#每转换一行后要记得换行</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(str_image)</span><br></pre></td></tr></table></figure>
-
+<p>由映射关系有：</p>
+<script type="math/tex; mode=display">
+\frac{\text{颜色值}}{\text{颜色表长度}} = \frac{\text{字符在字符表中的位置}}{\text{字符表的长度}}</script><p>即：</p>
+<script type="math/tex; mode=display">
+\text{字符在字符表中的位置}=\frac{\text{颜色值}}{\text{颜色表长度}}\times \text{字符表的长度}</script><h3 id="图片字符化完整代码"><a href="#图片字符化完整代码" class="headerlink" title="图片字符化完整代码"></a>图片字符化完整代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line">dic = <span class="string">&#x27;&#x27;&#x27; .&#x27;`^&quot;,:;Il!i&gt;&lt;~+_-?][&#125;&#123;1)(|\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&amp;8%B@&#x27;&#x27;&#x27;</span></span><br><span class="line">image = cv2.imread(<span class="string">&#x27;image&#x27;</span>)</span><br><span class="line">gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)</span><br><span class="line">gray = cv2.resize(gray, (<span class="number">100</span>, <span class="number">40</span>)) <span class="comment">#大小可自定义调节</span></span><br><span class="line">str_image = <span class="string">&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> gray:</span><br><span class="line">    <span class="keyword">for</span> pixel <span class="keyword">in</span> line:</span><br><span class="line">        index = <span class="built_in">int</span>(pixel / <span class="number">256</span> * <span class="built_in">len</span>(dic)) <span class="comment">#获取对应字符的下标</span></span><br><span class="line">        str_image += dic[index]</span><br><span class="line">    str_image += <span class="string">&#x27;\n&#x27;</span> <span class="comment">#每转换一行后要记得换行</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(str_image)</span><br></pre></td></tr></table></figure>
 <h2 id="四、视频字符化"><a href="#四、视频字符化" class="headerlink" title="四、视频字符化"></a>四、视频字符化</h2><p>基于以上步骤，我们只需要逐帧读取视频，再逐帧字符化即可</p>
 <h3 id="视频字符化完整代码"><a href="#视频字符化完整代码" class="headerlink" title="视频字符化完整代码"></a>视频字符化完整代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line">dic = <span class="string">&#x27;&#x27;&#x27; .&#x27;`^&quot;,:;Il!i&gt;&lt;~+_-?][&#125;&#123;1)(|\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&amp;8%B@&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">video = cv2.VideoCapture(<span class="string">&#x27;video.mp4&#x27;</span>)</span><br><span class="line">ret, frame = video.read()</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> res:</span><br><span class="line">    str_image = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    gray = cv2.cv2.cvtColor(frame, cv2.COLOR_RGB2GRAY)</span><br><span class="line">    gray = cv2.resize(gray, (<span class="number">100</span>, <span class="number">40</span>)) <span class="comment">#将图片压缩以减少计算量</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> gray:</span><br><span class="line">        <span class="keyword">for</span> pixel <span class="keyword">in</span> line:</span><br><span class="line">            index = <span class="built_in">int</span>(pixel / <span class="number">256</span> * <span class="built_in">len</span>(dic))</span><br><span class="line">        str_image += <span class="string">&#x27;\n&#x27;</span></span><br><span class="line">    os.system(<span class="string">&#x27;clear&#x27;</span>) <span class="comment">#清空屏幕，Windows为cls</span></span><br><span class="line">    <span class="built_in">print</span>(str_image)</span><br><span class="line">    ret, frame = video.read()</span><br></pre></td></tr></table></figure>
-
 <h3 id="附加（提高转换效率的一些办法）"><a href="#附加（提高转换效率的一些办法）" class="headerlink" title="附加（提高转换效率的一些办法）"></a>附加（提高转换效率的一些办法）</h3><p>利用numba提高计算速度</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numba <span class="keyword">as</span> nb</span><br></pre></td></tr></table></figure>
-
 <p>利用sys禁用输出缓冲区</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line">sys.stdout.flush() <span class="comment">#替换os.system(&#x27;clear&#x27;)</span></span><br></pre></td></tr></table></figure>
-
 <h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><ul>
 <li>[1] [知乎]:<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/129622984">https://zhuanlan.zhihu.com/p/129622984</a></li>
 </ul>
@@ -376,5 +372,20 @@
 
 
   </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>

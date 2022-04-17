@@ -146,9 +146,8 @@
 
 基础在$\LaTeX$中，所有的命令都以 \开头。一般形式如下：
 1\命令[参数]&#123;参数&#125;
-
 一个$\LaTeX$文档简单的结构为：
-1234567891011121314\documentclass[utf-8]&#123;article&#125...</p></div><div class="meta cap"><span class="cap" id="post-meta">发布于&nbsp;<time datetime="2022-03-25T16:00:00.000Z">2022-03-26</time></span></div></article>
+1234567891011121314\documentclass[utf-8]&#123;article&#125;...</p></div><div class="meta cap"><span class="cap" id="post-meta">发布于&nbsp;<time datetime="2022-03-25T16:00:00.000Z">2022-03-26</time></span></div></article>
 </a></div>
   
 
@@ -344,5 +343,20 @@
 
 
   </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>
