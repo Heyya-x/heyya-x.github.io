@@ -3640,6 +3640,7 @@ h1.article-title {
   color: var(--text-p0);
 }
 article.md.content {
+  text-align: justify;
   position: relative;
   margin-bottom: 2rem;
   display: flex;
