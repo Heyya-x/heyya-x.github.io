@@ -96,7 +96,7 @@
 <nav class="menu dis-select"><a class="nav-item active" href="/">Blog</a><a class="nav-item" href="/notes/">Note</a><a class="nav-item" href="/about/">About</a></nav></header>
 
 <div class="widgets">
-<div class="widget-wrap" id="markdown"><div class="widget-header cap dis-select"><span class="name"></span></div><div class="widget-body fs14"><p>天道几何，万品流形先自守;<br>变分无限，孤心测度有同伦。</p>
+<div class="widget-wrap" id="markdown"><div class="widget-header cap dis-select"><span class="name"></span></div><div class="widget-body fs14"><p>天道几何，万品流形先自守; 变分无限，孤心测度有同伦。</p>
 </div></div>
 
 <div class="widget-wrap" id="recent"><div class="widget-header cap dis-select"><span class="name">Recent Update</span></div><div class="widget-body fs14"><div class="more-item"><a class="title" href="/2022/04/26/CompletenessOfTheRealNumbers/">实数系的完备性</a></div><div class="more-item"><a class="title" href="/2022/04/24/TED-8/">History of goths(TED-8)</a></div><div class="more-item"><a class="title" href="/2022/04/23/TED-7/">History of cheese(TED-7)</a></div><div class="more-item"><a class="title" href="/2022/04/19/%E5%AD%A6%E6%B8%A3%E7%AC%94%E8%AE%B0/">日常琐碎</a></div><div class="more-item"><a class="title" href="/2022/03/26/LaTeX_note/">$\LaTeX$ 笔记（更新中）</a></div></div></div>
@@ -340,5 +340,29 @@
 
 
   </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+
+<!--
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+-->
+<script type="text/javascript"
+   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
 </body>
 </html>
