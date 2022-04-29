@@ -63,7 +63,7 @@
 <meta property="og:description" content="实数系的公理、定理和性质 我们假设实数的完备性（连续性）的公理是：  戴德金原理 （Dedekind completeness） Axiom 若将实数集 $ $ 分成两个子集 \(S\) 和 \(T\)，满足： （1）\(S \ne \varnothing\) ，\(T \ne \varnothing\)； （2）\(\mathbb{R} &#x3D; S \cap T\)； （3）\(\forall x">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-04-26T15:47:34.000Z">
-<meta property="article:modified_time" content="2022-04-29T10:47:07.860Z">
+<meta property="article:modified_time" content="2022-04-29T15:06:59.631Z">
 <meta property="article:author" content="Heyya&#39;s Blog">
 <meta property="article:tag" content="数学分析">
 <meta name="twitter:card" content="summary">
@@ -102,7 +102,7 @@
 
 <div class="widgets">
 
-<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">TOC</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E6%95%B0%E7%B3%BB%E7%9A%84%E5%85%AC%E7%90%86%E5%AE%9A%E7%90%86%E5%92%8C%E6%80%A7%E8%B4%A8"><span class="toc-text">实数系的公理、定理和性质</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%B4%E5%BE%B7%E9%87%91%E5%8E%9F%E7%90%86-leftrightarrow-%E7%A1%AE%E7%95%8C%E5%8E%9F%E7%90%86"><span class="toc-text">1. 戴德金原理 \(\Leftrightarrow\) 确界原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A1%AE%E7%95%8C%E5%8E%9F%E7%90%86-rightarrow-%E5%8D%95%E8%B0%83%E6%9C%89%E7%95%8C%E5%8E%9F%E7%90%86"><span class="toc-text">2. 确界原理 \(\Rightarrow\) 单调有界原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E8%B0%83%E6%9C%89%E7%95%8C%E5%AE%9A%E7%90%86-rightarrow-%E9%97%AD%E5%8C%BA%E9%97%B4%E5%A5%97%E5%AE%9A%E7%90%86"><span class="toc-text">3.单调有界定理 \(\Rightarrow\) 闭区间套定理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AD%E5%8C%BA%E9%97%B4%E5%AE%9A%E7%90%86-rightarrow-%E6%9C%89%E9%99%90%E8%A6%86%E7%9B%96%E5%AE%9A%E7%90%86"><span class="toc-text">4. 闭区间定理 \(\Rightarrow\) 有限覆盖定理</span></a></li></ol></div></div></div>
+<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">TOC</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E6%95%B0%E7%B3%BB%E7%9A%84%E5%85%AC%E7%90%86%E5%AE%9A%E7%90%86%E5%92%8C%E6%80%A7%E8%B4%A8"><span class="toc-text">实数系的公理、定理和性质</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%B4%E5%BE%B7%E9%87%91%E5%8E%9F%E7%90%86-leftrightarrow-%E7%A1%AE%E7%95%8C%E5%8E%9F%E7%90%86"><span class="toc-text">1. 戴德金原理 \(\Leftrightarrow\) 确界原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A1%AE%E7%95%8C%E5%8E%9F%E7%90%86-rightarrow-%E5%8D%95%E8%B0%83%E6%9C%89%E7%95%8C%E5%8E%9F%E7%90%86"><span class="toc-text">2. 确界原理 \(\Rightarrow\) 单调有界原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E8%B0%83%E6%9C%89%E7%95%8C%E5%AE%9A%E7%90%86-rightarrow-%E9%97%AD%E5%8C%BA%E9%97%B4%E5%A5%97%E5%AE%9A%E7%90%86"><span class="toc-text">3.单调有界定理 \(\Rightarrow\) 闭区间套定理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AD%E5%8C%BA%E9%97%B4%E5%AE%9A%E7%90%86-rightarrow-%E6%9C%89%E9%99%90%E8%A6%86%E7%9B%96%E5%AE%9A%E7%90%86"><span class="toc-text">4. 闭区间定理 \(\Rightarrow\) 有限覆盖定理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%89%E9%99%90%E8%A6%86%E7%9B%96%E5%AE%9A%E7%90%86-rightarrow-%E8%81%9A%E7%82%B9%E5%AE%9A%E7%90%86"><span class="toc-text">5. 有限覆盖定理 \(\Rightarrow\) 聚点定理</span></a></li></ol></div></div></div>
 
 
 </div>
@@ -131,8 +131,7 @@
 </ol>
 <p>其余7个关于连续性的基本定理：</p>
 <ol type="1">
-<li><p><strong>确界原理（least-upper-bound property）</strong></p>
-<p>若非空数集 <span class="math inline">\(E\)</span> 有上界（下界），则数集 <span class="math inline">\(E\)</span> 存在唯一的上确界（下确界）.</p></li>
+<li><p><strong>确界原理（least-upper-bound property）</strong></p></li>
 <li><p><strong>单调有界定理（monotone convergence theorem）</strong></p></li>
 <li><p><strong>闭区间套定理（nested convergence theorem）</strong></p></li>
 <li><p><strong>有限覆盖定理（Heine-Borel theorem）</strong></p></li>
@@ -157,6 +156,7 @@
 <li><p><span class="math inline">\(\forall \varepsilon &gt; 0\)</span>，<span class="math inline">\(\exists x_0 \in E\)</span>，有 <span class="math inline">\(\beta - \varepsilon &lt; x_0\)</span>，</p>
 <p>则称 <span class="math inline">\(\beta\)</span> 是数集 <span class="math inline">\(E\)</span> 的上确界，表示为 <span class="math inline">\(\beta = \sup E\)</span>.</p></li>
 </ol>
+<p><strong>Theorem (确界原理)</strong> 若非空数集 <span class="math inline">\(E\)</span> 有上界（下界），则数集 <span class="math inline">\(E\)</span> 存在唯一的上确界（下确界）.</p>
 <p><strong>Proof</strong> 首先，定义集合 <span class="math inline">\(T = \{ a \in \mathbb{R} \vert \forall x \in E, a &gt; x \}\)</span> ， <span class="math inline">\(S = \mathbb{R} \backslash E\)</span>，</p>
 <p><strong>必要性</strong>：</p>
 <ol type="1">
@@ -181,32 +181,40 @@
 </ol>
 <p>综上，<span class="math inline">\(\forall a \in S，b \in T\)</span>，总能找到 <span class="math inline">\(c \in \mathbb{R}\)</span>，使得 <span class="math inline">\(a \le c \le b\)</span>. <span class="math inline">\(\blacksquare\)</span></p>
 <h2 id="确界原理-rightarrow-单调有界原理">2. 确界原理 <span class="math inline">\(\Rightarrow\)</span> 单调有界原理</h2>
-<p><strong>Definition</strong> 单调有界数列必收敛.</p>
+<p><strong>Theorem (单调有界原理)</strong> 单调有界数列必收敛.</p>
 <p><strong>Proof</strong> 不妨设 <span class="math inline">\(\{a_n\}\)</span> 为单调递增数列，且有上界. 由确界原理知，<span class="math inline">\(\{ a_n \}\)</span> 存在上确界 <span class="math inline">\(\beta\)</span>.</p>
 <p>由上确界的定义，<span class="math inline">\(\forall \varepsilon &gt; 0\)</span>， <span class="math inline">\(\exists N \in \mathbb{Z}\)</span>，有 <span class="math inline">\(\beta - \varepsilon &lt; a_N\)</span>.</p>
 <p>对上述的 <span class="math inline">\(N\)</span>，<span class="math inline">\(\forall n &gt; N\)</span>，有 <span class="math inline">\(\beta - \varepsilon &lt; a_N \le a_n &lt; \beta + \varepsilon\)</span>，即 $a_n - &lt; $.</p>
 <p>所以 <span class="math inline">\(\displaystyle \lim_{n \to \infty} a_n = \beta\)</span>. <span class="math inline">\(\blacksquare\)</span></p>
 <h2 id="单调有界定理-rightarrow-闭区间套定理">3.单调有界定理 <span class="math inline">\(\Rightarrow\)</span> 闭区间套定理</h2>
-<p><strong>Definition 1</strong> 若数列 <span class="math inline">\(\{ a_n \}\)</span> 和 <span class="math inline">\(\{ b_n \}\)</span> 满足以下两个条件：</p>
+<p><strong>Theorem (闭区间套定理)</strong> 设有闭区间列 <span class="math inline">\(\{[a_n, b_n]\}\)</span>，若：</p>
+<p>（1）<span class="math inline">\([a_1,b_1] \supset [a_2, b_2] \supset \cdots \supset [a_n,b_n] \supset \cdots\)</span>；</p>
+<p>（2）<span class="math inline">\(\displaystyle \lim_{n \to \infty} (b_n - a_n) = 0\)</span>，</p>
+<p>则存在唯一的 <span class="math inline">\(c\)</span> 属于所有区间，即 <span class="math inline">\(\{c\} = \bigcap \limits_{n = 1}^{\infty} [a_n, b_n]\)</span>，且 <span class="math inline">\(\lim \limits_{n \to \infty} a_n = \lim \limits_{n \to \infty} b_n = c\)</span> .</p>
+<p><strong>Theorem</strong>* 若数列 <span class="math inline">\(\{ a_n \}\)</span> 和 <span class="math inline">\(\{ b_n \}\)</span> 满足以下两个条件：</p>
 <p>（1） <span class="math inline">\(\forall n \in \mathbb{Z}^+\)</span>，有 <span class="math inline">\(a_n \le a_{n + 1} &lt; b_{n + 1} \le b_n\)</span>；</p>
 <p>（2 ）<span class="math inline">\(\displaystyle \lim_{n \to \infty} (b_n - a_n) = 0\)</span>，</p>
 <p>则存在唯一的 <span class="math inline">\(c \in \mathbb{R}\)</span>，<span class="math inline">\(\forall n \in \mathbb{Z}^+\)</span>，有 $a_n c b_n $，且 $<em>{ n } a_n = </em>{ n } b_n = c $ .</p>
-<p><strong>Definition 2</strong> 设有闭区间列 <span class="math inline">\(\{[a_n, b_n]\}\)</span>，若：</p>
-<p>（1）<span class="math inline">\([a_1,b_1] \supset [a_2, b_2] \supset \cdots \supset [a_n,b_n] \supset \cdots\)</span>；</p>
-<p>（2）<span class="math inline">\(\displaystyle \lim_{n \to \infty} (b_n - a_n) = 0\)</span>，</p>
 <p><strong>Proof</strong> 由条件（1）知，<span class="math inline">\(\{ a_n \}\)</span> 为单调递增数列， 且有上界 <span class="math inline">\(b\)</span>. 由单调有界定理，<span class="math inline">\(\{a_n\}\)</span> 收敛. <span class="math inline">\(\exists c \in \mathbb{R}\)</span>，使得 <span class="math inline">\(\displaystyle \lim_{n \to \infty} a_n = c\)</span> . 同理 <span class="math inline">\(\{b_n\}\)</span> 收敛. 且有 <span class="math inline">\(\displaystyle \lim_{n \to \infty} b_n =\)</span> <span class="math inline">\(\displaystyle \lim_{n \to \infty} [(b_n - a_n) + a_n] =\)</span> <span class="math inline">\(\lim \limits_{n \to \infty} (b_n + a_n) + \lim\limits_{n \to \infty} a_n = c\)</span>.</p>
 <p>下面证明 $ c _{n = 1}^{}[a_n, b_n]$ 的存在性，由 <span class="math inline">\(\sup \{a_n\} = \inf\{b_n\}\)</span>，由上确界的定义知， <span class="math inline">\(\forall n \in \mathbb{Z}^+\)</span>，$a_n c b_n $.</p>
 <p>下面在证明唯一性，设 <span class="math inline">\(\exists c&#39; \ne c \in \mathbb{R}\)</span>，<span class="math inline">\(\forall n \in \mathbb{Z}^+\)</span>，有 <span class="math inline">\(a_n \le c&#39; \le b_n\)</span>. 又因为 <span class="math inline">\(\lim \limits_{n \to \infty} a_n = \lim\limits_{n \to \infty} b_n = c\)</span>，由夹逼定理知， <span class="math inline">\(c = c&#39;\)</span>. <span class="math inline">\(\blacksquare\)</span></p>
 <h2 id="闭区间定理-rightarrow-有限覆盖定理">4. 闭区间定理 <span class="math inline">\(\Rightarrow\)</span> 有限覆盖定理</h2>
-<p><strong>Definition</strong> 若开区间集 <span class="math inline">\(\Gamma\)</span> 覆盖了闭区间 <span class="math inline">\([a, b]\)</span>，则在 <span class="math inline">\(\Gamma\)</span> 中存在有限个开区间也覆盖了闭区间 <span class="math inline">\([a,b]\)</span>.</p>
-<p><strong>Proof</strong> 利用反证法，若 <span class="math inline">\(\Gamma\)</span> 中任意有限个开区间都不能覆盖闭区间 <span class="math inline">\([a,b]\)</span> ，则将 <span class="math inline">\([a,b]\)</span> 二等分，可得到两个闭子区间 <span class="math inline">\([a. \dfrac{a + b}{2}]\)</span>，$ [, b]$，则其中至少有一个不能被 <span class="math inline">\(\Gamma\)</span> 中的有限个开区间覆盖，记该闭区间为 <span class="math inline">\([a_1,b_1]\)</span>，再将 <span class="math inline">\([a_1,b_1]\)</span> 二等分，得到 <span class="math inline">\([a_1, \dfrac{a_1 + b_1}{2}]\)</span> ，$ [, b_1]$，则其中仍至少有一个不能被 <span class="math inline">\(\Gamma\)</span> 中的有限个开区间覆盖，记该闭区间为 <span class="math inline">\([a_2,b_2]\)</span>，如此下去，得到一个闭区间列 <span class="math inline">\(\{[a_n,b_n\}\)</span>，满足：</p>
+<p><strong>Theorem (有限覆盖定理)</strong> 若开区间集 <span class="math inline">\(\Gamma\)</span> 覆盖了闭区间 <span class="math inline">\([a, b]\)</span>，则在 <span class="math inline">\(\Gamma\)</span> 中存在有限个开区间也覆盖了闭区间 <span class="math inline">\([a,b]\)</span>.</p>
+<p><strong>Proof</strong> 反证法，若 <span class="math inline">\(\Gamma\)</span> 中任意有限个开区间都不能覆盖闭区间 <span class="math inline">\([a,b]\)</span> ，则将 <span class="math inline">\([a,b]\)</span> 二等分，可得到两个闭子区间 <span class="math inline">\([a. \dfrac{a + b}{2}]\)</span>，$ [, b]$，则其中至少有一个不能被 <span class="math inline">\(\Gamma\)</span> 中的有限个开区间覆盖，记该闭区间为 <span class="math inline">\([a_1,b_1]\)</span>，再将 <span class="math inline">\([a_1,b_1]\)</span> 二等分，得到 <span class="math inline">\([a_1, \dfrac{a_1 + b_1}{2}]\)</span> ，$ [, b_1]$，则其中仍至少有一个不能被 <span class="math inline">\(\Gamma\)</span> 中的有限个开区间覆盖，记该闭区间为 <span class="math inline">\([a_2,b_2]\)</span>，如此下去，得到一个闭区间列 <span class="math inline">\(\{[a_n,b_n\}\)</span>，满足：</p>
 <p>（1）<span class="math inline">\([a_1,b_1] \supset [a_2, b_2] \supset \cdots \supset [a_n,b_n] \supset \cdots\)</span>；</p>
-<p>（2）<span class="math inline">\(\lim \limits_{ n \to \infty } ( b_n - a_n ) = \lim \limits_{ n \to \infty } \frac{ b - a }{ 2^n } = 0\)</span>；</p>
+<p>（2）<span class="math inline">\(\lim \limits_{ n \to \infty } ( b_n - a_n ) = \lim \limits_{ n \to \infty } \dfrac{ b - a }{ 2^n } = 0\)</span>；</p>
 <p>（3）每个闭区间 <span class="math inline">\([a_n,b_n]\)</span>都不能被 $$ 中的有限个开区间覆盖，</p>
 <p>由闭区间套定理，存在唯一一个 <span class="math inline">\(c \in \bigcup\limits_{n = 1}^{\infty} [a_n,b_n]\)</span>，且 <span class="math inline">\(\displaystyle \lim_{n \to \infty} b_n = \lim_{n \to \infty} a_n = c\)</span>，显然 <span class="math inline">\(c\in[a,b]\)</span>，则 <span class="math inline">\(\exists (\alpha, \beta) \subset [a,b]\)</span>，使得 <span class="math inline">\(c\in(\alpha, \beta)\)</span>，由 <span class="math inline">\(\alpha &lt; c &lt; \beta\)</span>，且 <span class="math display">\[
 a &lt; \lim\limits_{n\to\infty} a_n = c = \lim\limits_{n\to\infty}b_n &lt; \beta，
 \]</span> 由极限的保序性，<span class="math inline">\(\exists n_0\)</span> 使得 <span class="math inline">\([a_{n_0, b_{n_0}}]\)</span> 可被 <span class="math inline">\(\Gamma\)</span> 中的开区间 <span class="math inline">\((\alpha, \beta)\)</span> 覆盖，与（3）矛盾.</p>
 <p>因此， <span class="math inline">\(\Gamma\)</span> 中存在有限个开区间也覆盖了闭区间 <span class="math inline">\([a,b]\)</span>. <span class="math inline">\(\blacksquare\)</span></p>
+<h2 id="有限覆盖定理-rightarrow-聚点定理">5. 有限覆盖定理 <span class="math inline">\(\Rightarrow\)</span> 聚点定理</h2>
+<p><strong>Theorem (聚点定理)</strong> 数轴上的任意有界无限点集 <span class="math inline">\(E\)</span> 至少有一个聚点.</p>
+<p><strong>Proof</strong> 由 <span class="math inline">\(E\)</span> 为有界点集，所以存在 <span class="math inline">\(a\)</span> , <span class="math inline">\(b\)</span> ，使得 <span class="math inline">\(E \subset [a,b]\)</span>.</p>
+<p>反证法 假若 <span class="math inline">\(E\)</span> 中没有聚点，则 <span class="math inline">\(\forall x \in [a, b]\)</span>， <span class="math inline">\(x\)</span> 都不是 <span class="math inline">\([a,b]\)</span> 的聚点. 于是 <span class="math inline">\(\forall \varepsilon_x &gt; 0\)</span>，都使得 <span class="math inline">\((x - \varepsilon_x, x + \varepsilon_x)\)</span> 中至多只有 <span class="math inline">\(E\)</span> 中有限多个点. 从而得到一个开区间集 <span class="math inline">\(\Gamma = \{(x - \varepsilon_x, x + \varepsilon_x) \vert x \in [a, b] \}\)</span> ，其中每个开区间 <span class="math inline">\((x - \varepsilon_x, x + \varepsilon_x)\)</span> 至多含有 <span class="math inline">\(E\)</span> 中有限多个点. 显然 <span class="math inline">\(\Gamma\)</span> 覆盖了闭区间 <span class="math inline">\([a,b]\)</span>，由有界覆盖定理，<span class="math inline">\(\Gamma\)</span> 中存在有限个开区间 <span class="math inline">\((x_1 - \varepsilon_1, x_1 + \varepsilon_1)\)</span>， <span class="math inline">\((x_2 - \varepsilon_2, x_2 + \varepsilon_2)\)</span>，<span class="math inline">\(\cdots\)</span>，<span class="math inline">\((x_n - \varepsilon_n, x_n + \varepsilon_n)\)</span> 覆盖了闭区间 <span class="math inline">\([a,b]\)</span>，即 <span class="math display">\[
+E \in [a,b] \subset \bigcup \limits_{k = 1}^n (x_k - \varepsilon_k, x_k + \varepsilon_k)
+\]</span> 因为 <span class="math inline">\(E\)</span> 为无限点集，所以 <span class="math inline">\(\bigcup \limits_{k = 1}^n (x_k - \varepsilon_k, x_k + \varepsilon_k)\)</span> 中含有 <span class="math inline">\(E\)</span> 中的无限多个点. 但是由 $(x_k - _k, x_k + _k) $ 中至多含有 <span class="math inline">\(E\)</span> 中的有限多个点，从而 <span class="math inline">\(\bigcup \limits_{k = 1}^n (x_k - \varepsilon_k, x_k + \varepsilon_k)\)</span> 中也仅含有 <span class="math inline">\(E\)</span> 中有限多个点，得到矛盾.</p>
+<p>所以 <span class="math inline">\(E\)</span> 中至少含有一个聚点. <span class="math inline">\(\blacksquare\)</span></p>
 
 
 <div class="article-footer reveal fs14"><section id="license"><div class="header"><span>License</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
