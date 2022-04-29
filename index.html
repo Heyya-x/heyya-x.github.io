@@ -138,15 +138,16 @@
 </div>
 
   <div class="post-list post"><a class="post-card post " href="/2022/04/26/CompletenessOfTheRealNumbers/">
-<article class="md"><h2 class="post-title">实数系的完备性</h2><div class="excerpt"><p>实数系的公理、定理和性质我们假设实数的完备性（连续性）的公理是：
+<article class="md"><h2 class="post-title">实数系的完备性</h2><div class="excerpt"><p>实数系的公理、定理和性质
+我们假设实数的完备性（连续性）的公理是：
 
 戴德金原理 （Dedekind completeness）
- Axiom 若将实数集 $\mathbb{R} $ 分成两个子集 $S$ 和 $T$，满足：
- （1）$S \ne \varnothing$ ，$T \ne \varnothing$；
- （2）$\mathbb{R} = S \bigcup T$；
- （3）$\f...</p></div><div class="meta cap"><span class="cap" id="post-meta">Posted on&nbsp;<time datetime="2022-04-26T15:47:34.000Z">2022-04-26</time></span></div></article>
+Axiom 若将实数集 $ $ 分成两个子集 \(S\) 和 \(T\)，满足：
+（1）\(S \ne \varnothing\) ，\(T \ne \varnothing\)；
+（2）\(\mathbb{R} = S \cap T\)；
+（3）\(\forall...</p></div><div class="meta cap"><span class="cap" id="post-meta">Posted on&nbsp;<time datetime="2022-04-26T15:47:34.000Z">2022-04-26</time></span></div></article>
 </a><a class="post-card post " href="/2022/04/24/TED-8/">
-<article class="md"><h2 class="post-title">History of goths(TED-8)</h2><div class="excerpt"><p> What do fans of atmospheric post-punk music, have in common with ancient barbarians? Not much. So why are both known as goths? Is it a weird coincidence or deeper connection stretching across the ...</p></div><div class="meta cap"><span class="cap" id="post-meta">Posted on&nbsp;<time datetime="2022-04-24T03:56:43.000Z">2022-04-24</time></span></div></article>
+<article class="md"><h2 class="post-title">History of goths(TED-8)</h2><div class="excerpt"><p>What do fans of atmospheric post-punk music, have in common with ancient barbarians? Not much. So why are both known as goths? Is it a weird coincidence or deeper connection stretching across the c...</p></div><div class="meta cap"><span class="cap" id="post-meta">Posted on&nbsp;<time datetime="2022-04-24T03:56:43.000Z">2022-04-24</time></span></div></article>
 </a><a class="post-card post " href="/2022/04/23/TED-7/">
 <article class="md"><h2 class="post-title">History of cheese(TED-7)</h2><div class="excerpt"><p>Before empires and royalty, before pottery and writting, before metal tools and weapons, there was cheese. As early as 8,000 BCE, the earlest Neolithic (新石器) farmers living in the Fertile Crescent,...</p></div><div class="meta cap"><span class="cap" id="post-meta">Posted on&nbsp;<time datetime="2022-04-22T16:43:00.000Z">2022-04-23</time></span></div></article>
 </a><a class="post-card post " href="/2022/04/19/%E5%AD%A6%E6%B8%A3%E7%AC%94%E8%AE%B0/">
@@ -173,38 +174,48 @@
 本笔记仅为本人自学时为便于自己的理解和记忆而做的笔记，可能存在概念不准确的地方。
 推荐使用Overleaf，参考网站。
 
-基础在$\LaTeX$中，所有的命令都以 \开头。一般形式如下：
+基础
+在\(\LaTeX\)中，所有的命令都以 \开头。一般形式如下：
 1\命令[参数]&#123;参数&#125;
-一个$\LaTeX$文档简单的结构为：
-1234567891011121314\documentclass[utf-8]&#123;article&#125;...</p></div><div class="meta cap"><span class="cap" id="post-meta">Posted on&nbsp;<time datetime="2022-03-25T16:00:00.000Z">2022-03-26</time></span></div></article>
+一个\(\LaTeX\)文档简单的结构为：
+1234567891011121314\documentclass[utf-8]&#123;article&...</p></div><div class="meta cap"><span class="cap" id="post-meta">Posted on&nbsp;<time datetime="2022-03-25T16:00:00.000Z">2022-03-26</time></span></div></article>
 </a><a class="post-card post " href="/2022/01/29/%E5%88%9D%E6%8E%A2Docker/">
 <article class="md"><h2 class="post-title">初探Docker</h2><div class="excerpt"><p>环境：macOS
-安装1brew install docker
-列出镜像1docker image ls
+安装
+1brew install docker
+列出镜像
+1docker image ls
 </p></div><div class="meta cap"><span class="cap" id="post-meta">Posted on&nbsp;<time datetime="2022-01-28T16:00:00.000Z">2022-01-29</time></span></div></article>
 </a><a class="post-card post " href="/2022/01/18/Python%E5%88%A9%E7%94%A8Opencv%E5%AE%9E%E7%8E%B0%E8%A7%86%E9%A2%91%E5%AD%97%E7%AC%A6%E5%8C%96/">
-<article class="md"><h2 class="post-title">Python利用Opencv实现视频字符化</h2><div class="excerpt"><p>一、安装Opencv利用pip安装Opencv，在终端输入：
+<article class="md"><h2 class="post-title">Python利用Opencv实现视频字符化</h2><div class="excerpt"><p>一、安装Opencv
+利用pip安装Opencv，在终端输入：
 1pip install opencv-python
-二、Opencv的基本操作图片操作
+二、Opencv的基本操作
+图片操作
+
 图片读取、预览
- 123456import cv2image = cv2.imread(&#x27;image.jpg&#x27;)	#读取JPG图片cv2.imshow(&#x27;image&#x27;, image)	#在窗口中显示图片...</p></div><div class="meta cap"><span class="cap" id="post-meta">Posted on&nbsp;<time datetime="2022-01-18T15:53:26.000Z">2022-01-18</time></span></div></article>
+123456import cv2image = cv2.imread(&#x27;image.jpg&#x27;)	#读取JPG图片cv2.imshow(&#x27;image&#x27;, image)	#在窗口中显示...</p></div><div class="meta cap"><span class="cap" id="post-meta">Posted on&nbsp;<time datetime="2022-01-18T15:53:26.000Z">2022-01-18</time></span></div></article>
 </a><a class="post-card post " href="/2021/11/24/Binary-Indexed-Tree/">
 <article class="md"><h2 class="post-title">树状数组</h2><div class="excerpt"><p>
 仅记录了树状数组一些操作。
 参考https://oi-wiki.org/ds/fenwick/
 
-操作获取$c_i$管理的数组$a$中的数的个数。
+操作
+获取\(c_i\)管理的数组\(a\)中的数的个数。
 123int lowbit(int x) &#123;  return x &amp; -x; //x + 1 = -x&#125;
-单点修改123456void add(int x, int v) &#123;  while (x &lt;=...</p></div><div class="meta cap"><span class="cap" id="post-meta">Posted on&nbsp;<time datetime="2021-11-24T15:41:42.000Z">2021-11-24</time></span></div></article>
+单点修改
+123456void add(int x, int v) &#123;  while (x...</p></div><div class="meta cap"><span class="cap" id="post-meta">Posted on&nbsp;<time datetime="2021-11-24T15:41:42.000Z">2021-11-24</time></span></div></article>
 </a><a class="post-card post " href="/2021/11/18/Hexo-Note/">
 <article class="md"><h2 class="post-title">Hexo建站笔记</h2><div class="excerpt"><p>
 利用Hexo建站及部署GitHub仓库的建站笔记。
 
-快速搭建Hexo网站（Quick install Hexo）安装（Install）macOS及Linux安装nodejs（Install nodejs）
+快速搭建Hexo网站（Quick install Hexo）
+安装（Install）
+macOS及Linux安装nodejs（Install nodejs）
 1$ brew install node
 *Windows下访问nodejs.org安装node。
 macOS及Linux下使用brew安装Hexo（Install Hexo）
-1$ ...</p></div><div class="meta cap"><span class="cap" id="post-meta">Posted on&nbsp;<time datetime="2021-11-17T16:00:00.000Z">2021-11-18</time></span></div></article>
+1...</p></div><div class="meta cap"><span class="cap" id="post-meta">Posted on&nbsp;<time datetime="2021-11-17T16:00:00.000Z">2021-11-18</time></span></div></article>
 </a></div>
   
 
@@ -397,23 +408,5 @@ macOS及Linux下使用brew安装Hexo（Install Hexo）
 
 
   </div>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-
 </body>
 </html>
